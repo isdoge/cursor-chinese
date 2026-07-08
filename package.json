@@ -1,0 +1,43 @@
+{
+  "name": "cursor-chinese",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tampermonkey userscript for Chinese localization of Cursor web dashboard and agents pages",
+  "homepage": "https://github.com/isdoge/cursor-chinese",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isdoge/cursor-chinese.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isdoge/cursor-chinese/issues"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/build.test.mjs",
+    "test:evidence": "node --test scripts/evidence.test.mjs"
+  },
+  "userscript": {
+    "displayName": "Cursor 中文化插件",
+    "namespace": "https://github.com/isdoge/cursor-chinese",
+    "description": "中文化 cursor 管理控制台界面的部分菜单及内容",
+    "icon": "https://ts3.tc.mm.bing.net/th/id/ODF.Vi7Qr3OxcQoUxuIrXygTkw?w=32&h=32&qlt=90&pcl=fffffc&o=6&pid=1.2",
+    "author": "狗带带子",
+    "matches": [
+      "https://cursor.com/*",
+      "https://www.cursor.com/*"
+    ],
+    "grants": [
+      "GM_getValue",
+      "GM_setValue"
+    ],
+    "runAt": "document-idle",
+    "homepageURL": "https://github.com/isdoge/cursor-chinese",
+    "supportURL": "https://github.com/isdoge/cursor-chinese/issues",
+    "updateURL": "https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js",
+    "downloadURL": "https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js"
+  }
+}
