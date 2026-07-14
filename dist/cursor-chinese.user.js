@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cursor 中文化插件
 // @namespace    https://github.com/isdoge/cursor-chinese
-// @version      1.0.0
+// @version      1.0.2
 // @description  中文化 cursor 管理控制台界面的部分菜单及内容
 // @author       狗带带子
 // @match        https://cursor.com/*
@@ -1344,7 +1344,6 @@
             Cursor: "Cursor"
         };
         const textOriginals = new WeakMap();
-        const elementTextOriginals = new WeakMap();
         const attrOriginals = new WeakMap();
         const ATTRIBUTES = [
             "aria-label",
@@ -1452,10 +1451,12 @@
                 return;
             }
             const translated = translateValue(original, "text");
-            if (!translated || node.nodeValue === translated) return;
+            if (!translated) return;
             const leading = original.match(/^\s*/)?.[0] ?? "";
             const trailing = original.match(/\s*$/)?.[0] ?? "";
-            node.nodeValue = `${leading}${translated}${trailing}`;
+            const nextValue = `${leading}${translated}${trailing}`;
+            if (node.nodeValue === nextValue) return;
+            node.nodeValue = nextValue;
         }
         function rememberAttr(element, attr, value) {
             let attrs = attrOriginals.get(element);
@@ -1509,45 +1510,6 @@
                 }
             }
         }
-        function shouldSkipElement(element) {
-            const tag = element.tagName.toLowerCase();
-            if ([
-                "script",
-                "style",
-                "noscript",
-                "textarea",
-                "input",
-                "code",
-                "pre"
-            ].includes(tag)) return true;
-            return Boolean(element.closest("[data-cursor-zh-skip], script, style, noscript, textarea, input, code, pre"));
-        }
-        function translateLeafTextElement(element) {
-            if (shouldSkipElement(element)) return;
-            if (element.childElementCount > 0) return;
-            const current = element.textContent ?? "";
-            if (!normalize(current)) return;
-            if (!elementTextOriginals.has(element)) {
-                elementTextOriginals.set(element, current);
-            }
-            const original = elementTextOriginals.get(element) ?? current;
-            if (state.language === "en") {
-                if (element.textContent !== original) element.textContent = original;
-                return;
-            }
-            const translated = translateValue(original, "text");
-            if (!translated || element.textContent === translated) return;
-            element.textContent = translated;
-        }
-        function translateLeafTextElements(root) {
-            const elements = root instanceof Element ? [
-                root,
-                ...Array.from(root.querySelectorAll("*"))
-            ] : Array.from(root.querySelectorAll("*"));
-            for (const element of elements){
-                translateLeafTextElement(element);
-            }
-        }
         function walkText(root) {
             const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
             let node = walker.nextNode();
@@ -1567,7 +1529,6 @@
                 translateElementText(element);
             }
             walkText(root);
-            translateLeafTextElements(root);
             applyIconButtonLabels(root);
             translateTitle();
         }
@@ -1614,27 +1575,25 @@
         function installObserver() {
             state.observer?.disconnect();
             state.observer = new MutationObserver((mutations)=>{
-                let shouldScanAll = false;
+                let shouldScheduleScan = false;
                 for (const mutation of mutations){
                     if (mutation.type === "childList") {
                         for (const node of Array.from(mutation.addedNodes)){
                             if (node.nodeType === Node.TEXT_NODE) {
                                 translateTextNode(node);
                             } else if (node.nodeType === Node.ELEMENT_NODE) {
-                                translateRoot(node);
+                                shouldScheduleScan = true;
                             }
                         }
                     } else if (mutation.type === "attributes") {
                         translateAttributes(mutation.target);
                     } else if (mutation.type === "characterData") {
                         translateTextNode(mutation.target);
-                        const parent = mutation.target.parentElement;
-                        if (parent) translateLeafTextElement(parent);
                     } else {
-                        shouldScanAll = true;
+                        shouldScheduleScan = true;
                     }
                 }
-                if (shouldScanAll) scheduleTranslate(80);
+                if (shouldScheduleScan) scheduleTranslate(60);
             });
             state.observer.observe(document.documentElement, {
                 childList: true,

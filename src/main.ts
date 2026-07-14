@@ -1223,7 +1223,6 @@ const titleRules: Record<string, string> = {
 };
 
 const textOriginals = new WeakMap<Text, string>();
-const elementTextOriginals = new WeakMap<Element, string>();
 const attrOriginals = new WeakMap<Element, Map<string, string>>();
 const ATTRIBUTES = [
   "aria-label",
@@ -1370,11 +1369,15 @@ function translateTextNode(node: Text): void {
   }
 
   const translated = translateValue(original, "text");
-  if (!translated || node.nodeValue === translated) return;
+  if (!translated) return;
 
   const leading = original.match(/^\s*/)?.[0] ?? "";
   const trailing = original.match(/\s*$/)?.[0] ?? "";
-  node.nodeValue = `${leading}${translated}${trailing}`;
+  const nextValue = `${leading}${translated}${trailing}`;
+  // Assigning the same value still emits a characterData mutation in browsers.
+  // Compare the final whitespace-preserving value to avoid an observer loop.
+  if (node.nodeValue === nextValue) return;
+  node.nodeValue = nextValue;
 }
 
 function rememberAttr(element: Element, attr: string, value: string): void {
@@ -1439,61 +1442,10 @@ function applyIconButtonLabels(root: ParentNode): void {
   }
 }
 
-function shouldSkipElement(element: Element): boolean {
-  const tag = element.tagName.toLowerCase();
-  if (
-    [
-      "script",
-      "style",
-      "noscript",
-      "textarea",
-      "input",
-      "code",
-      "pre",
-    ].includes(tag)
-  )
-    return true;
-  return Boolean(
-    element.closest(
-      "[data-cursor-zh-skip], script, style, noscript, textarea, input, code, pre",
-    ),
-  );
-}
-
-function translateLeafTextElement(element: Element): void {
-  if (shouldSkipElement(element)) return;
-  if (element.childElementCount > 0) return;
-
-  const current = element.textContent ?? "";
-  if (!normalize(current)) return;
-
-  if (!elementTextOriginals.has(element)) {
-    elementTextOriginals.set(element, current);
-  }
-
-  const original = elementTextOriginals.get(element) ?? current;
-  if (state.language === "en") {
-    if (element.textContent !== original) element.textContent = original;
-    return;
-  }
-
-  const translated = translateValue(original, "text");
-  if (!translated || element.textContent === translated) return;
-  element.textContent = translated;
-}
-
-function translateLeafTextElements(root: ParentNode): void {
-  const elements =
-    root instanceof Element
-      ? [root, ...Array.from(root.querySelectorAll("*"))]
-      : Array.from(root.querySelectorAll("*"));
-
-  for (const element of elements) {
-    translateLeafTextElement(element);
-  }
-}
-
 function walkText(root: ParentNode): void {
+  // Keep framework-managed child-node structure intact. Cursor sometimes splits
+  // pricing copy across several Text nodes, so replacing element.textContent can
+  // trigger a React repair loop that freezes dynamic pages such as /spending.
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let node = walker.nextNode();
   while (node) {
@@ -1515,7 +1467,6 @@ function translateRoot(root: ParentNode = document.body): void {
     translateElementText(element);
   }
   walkText(root);
-  translateLeafTextElements(root);
   applyIconButtonLabels(root);
   translateTitle();
 }
@@ -1573,27 +1524,27 @@ function installRouteWatcher(): void {
 function installObserver(): void {
   state.observer?.disconnect();
   state.observer = new MutationObserver((mutations) => {
-    let shouldScanAll = false;
+    let shouldScheduleScan = false;
     for (const mutation of mutations) {
       if (mutation.type === "childList") {
         for (const node of Array.from(mutation.addedNodes)) {
           if (node.nodeType === Node.TEXT_NODE) {
             translateTextNode(node as Text);
           } else if (node.nodeType === Node.ELEMENT_NODE) {
-            translateRoot(node as Element);
+            // Cursor can insert large nested subtrees in one render. Coalesce
+            // them into one delayed scan instead of rescanning every added root.
+            shouldScheduleScan = true;
           }
         }
       } else if (mutation.type === "attributes") {
         translateAttributes(mutation.target as Element);
       } else if (mutation.type === "characterData") {
         translateTextNode(mutation.target as Text);
-        const parent = (mutation.target as Text).parentElement;
-        if (parent) translateLeafTextElement(parent);
       } else {
-        shouldScanAll = true;
+        shouldScheduleScan = true;
       }
     }
-    if (shouldScanAll) scheduleTranslate(80);
+    if (shouldScheduleScan) scheduleTranslate(60);
   });
 
   state.observer.observe(document.documentElement, {

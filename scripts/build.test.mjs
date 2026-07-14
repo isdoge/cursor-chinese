@@ -6,6 +6,9 @@ import path from "node:path";
 
 const rootDir = path.resolve(import.meta.dirname, "..");
 const outputFile = path.join(rootDir, "dist", "cursor-chinese.user.js");
+const packageJson = JSON.parse(
+  await readFile(path.join(rootDir, "package.json"), "utf8"),
+);
 
 test("build produces a valid userscript", async () => {
   // Run build.
@@ -29,7 +32,10 @@ test("build produces a valid userscript", async () => {
     "Must contain www.cursor.com match",
   );
   assert.match(dist, /\/\/ @run-at\s+document-idle/, "Must have run-at");
-  assert.match(dist, /\/\/ @version\s+1\.0\.0/, "Must have version 1.0.0");
+  assert.ok(
+    dist.includes(`// @version      ${packageJson.version}`),
+    `Must have version ${packageJson.version}`,
+  );
 
   // 2. Has bundled bootstrap function
   assert.ok(dist.includes("bootstrap()"), "Must contain bootstrap call");
@@ -69,6 +75,36 @@ test("build produces a valid userscript", async () => {
 
   console.log(
     `Built dist size: ${(Buffer.byteLength(dist, "utf8") / 1024).toFixed(1)} KB`,
+  );
+});
+
+test("translation preserves framework-managed element structure", async () => {
+  const dist = await readFile(outputFile, "utf8");
+
+  assert.ok(
+    !dist.includes("element.textContent = translated"),
+    "Must translate Text nodes without replacing an element's child nodes",
+  );
+  assert.ok(
+    !dist.includes("translateLeafTextElement"),
+    "Must not restore the unsafe leaf-element translation path",
+  );
+  assert.ok(
+    !dist.includes("translateRoot(node"),
+    "MutationObserver must batch added elements instead of scanning each one synchronously",
+  );
+});
+
+test("translation avoids no-op characterData writes", async () => {
+  const dist = await readFile(outputFile, "utf8");
+
+  assert.ok(
+    dist.includes("if (node.nodeValue === nextValue) return"),
+    "Must compare the final whitespace-preserving value before assigning nodeValue",
+  );
+  assert.ok(
+    !dist.includes("node.nodeValue === translated"),
+    "Must not compare against the normalized translation before restoring whitespace",
   );
 });
 
