@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cursor 中文化插件
 // @namespace    https://github.com/isdoge/cursor-chinese
-// @version      1.0.4
+// @version      1.0.5
 // @description  中文化 cursor 管理控制台界面的部分菜单及内容
 // @author       狗带带子
 // @match        https://cursor.com/*
@@ -684,6 +684,12 @@
             "GitLab Connections": "GitLab 连接",
             "Bugbot reviews are billed through your Cursor plan usage": "Bugbot 审查会计入你的 Cursor 套餐用量",
             "Enable Bugbot": "启用 Bugbot",
+            "Enable Usage-Based Billing": "启用按用量计费",
+            "Cut review time and eliminate bugs with agent reviews": "缩短审查时间，通过 Agent 审查消除缺陷",
+            "Create repo-level rules for tailored reviews": "创建仓库级规则，实现定制化审查",
+            "Draws from your included Cursor usage, with on-demand for any overages": "从你的 Cursor 包含用量中扣除，超额部分按需计费",
+            "Pause at any time": "随时可暂停",
+            "Usage-based billing (estimated $1.20 per review), billed against your existing Cursor usage limits. Terms & Conditions apply.": "按用量计费（每次审查约 $1.20），从你现有的 Cursor 用量限制中扣除。适用条款与条件。",
             "Enable Bugbot on a repository to get started": "先在某个仓库上启用 Bugbot 以开始使用",
             "To start using Bugbot, you need to enable it on at least one repository. Select an organization below to get started.": "要开始使用 Bugbot，你需要在至少一个仓库上启用它。请在下方选择一个组织以开始。",
             "Repositories Enabled": "已启用仓库",
