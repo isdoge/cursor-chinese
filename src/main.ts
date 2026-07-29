@@ -448,6 +448,12 @@ const textRules: Record<string, string> = {
   "No environments configured": "尚未配置环境",
   "Start Setup": "开始设置",
   "Create a New Environment": "创建新环境",
+  "Development environment setup": "开发环境配置",
+  "No pushed changes": "没有已推送的更改",
+  "Environment is ready to be saved.": "环境已可保存。",
+  "Environment setup takes ~5–20 minutes.": "环境配置大约需要 5–20 分钟。",
+  "Notify me": "通知我",
+  "Add follow up for setup agent": "为配置 Agent 添加后续消息",
   "Select one or more repositories.": "选择一个或多个仓库。",
   "Allow posting artifacts to GitHub": "允许将产物发布到 GitHub",
   "Allow cloud agents to embed images directly in PR descriptions using hard-to-guess public URLs.":
