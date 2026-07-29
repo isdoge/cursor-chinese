@@ -313,6 +313,7 @@ const textRules: Record<string, string> = {
   "Multiple models cannot be combined with Long-running.":
     "多模型无法与长时间运行同时使用。",
   "Run security audit": "运行安全审计",
+  "Run summary": "运行摘要",
 
   // Automations page evidence.
   Popular: "热门",
@@ -400,10 +401,12 @@ const textRules: Record<string, string> = {
   "Monitor and manage your self-hosted cloud machines":
     "监控并管理你的自托管云机器",
   "Enable self-hosted pool": "启用自托管池",
+  "Enable Self-Hosted Pool": "启用自托管池",
   "Enable self-hosted pool to create a personal pool of workers.":
     "启用自托管池以创建个人工作节点池。",
   "Remote Control": "远程控制",
   "Enable remote-control": "启用远程控制",
+  "Enable Remote Control": "启用远程控制",
   "Control your local agents remotely from mobile and web.":
     "通过移动端和网页远程控制你的本地 Agents。",
   "My Machines": "我的机器",
@@ -436,6 +439,7 @@ const textRules: Record<string, string> = {
     "用于帮助 Cloud Agents 选择正确仓库或环境的路由规则。",
   "Add Rule": "添加规则",
   "No routing rules yet": "还没有路由规则",
+  "No Routing Rules Yet": "还没有路由规则",
   "Network Access Settings": "网络访问设置",
   "Control which network destinations your cloud agents can access":
     "控制云端 Agents 可以访问哪些网络目标",
@@ -445,11 +449,13 @@ const textRules: Record<string, string> = {
     "为你的 Cloud Agents 安全设置环境变量。",
   "Add Secrets": "添加密钥",
   "No secrets yet": "还没有密钥",
+  "No Secrets Yet": "还没有密钥",
   "No environments configured": "尚未配置环境",
   "Start Setup": "开始设置",
   "Create a New Environment": "创建新环境",
   "Select one or more repositories.": "选择一个或多个仓库。",
   "Allow posting artifacts to GitHub": "允许将产物发布到 GitHub",
+  "Allow Posting Artifacts to GitHub": "允许将产物发布到 GitHub",
   "Allow cloud agents to embed images directly in PR descriptions using hard-to-guess public URLs.":
     "允许云端 Agent 使用难以猜测的公开 URL，将图片直接嵌入 PR 描述。",
   "Post Artifact": "发布产物",
@@ -457,6 +463,7 @@ const textRules: Record<string, string> = {
   Always: "始终",
   Never: "从不",
   "Routing rules": "路由规则",
+  "Routing Rules": "路由规则",
   "Description...": "描述...",
   Select: "选择",
   "Defaults + my allowlist": "默认值 + 我的允许列表",
@@ -898,14 +905,17 @@ const textRules: Record<string, string> = {
   isdoge: "isdoge",
   "doge is": "doge is",
   "Switch to annual billing and save 20%": "切换到年付可节省 20%",
+  "Save 20% when billed annually": "年付可节省 20%",
   "Upgrade Now": "立即升级",
   "Entry-level plan with access to premium models, unlimited Tab completions, and more.":
     "入门级方案，可使用高级模型、无限 Tab 补全等功能。",
   "Your subscription will auto renew on": "您的订阅将自动续订于",
   "Adjust plan": "调整方案",
+  "Adjust your plan": "调整你的方案",
   "Choose your plan": "选择你的方案",
   Monthly: "月付",
   Yearly: "年付",
+  Annual: "年付",
   "Billed monthly": "按月计费",
   "Billed annually": "按年计费",
   "per month": "每月",
@@ -963,6 +973,8 @@ const textRules: Record<string, string> = {
   "Included in Pro": "Pro 已包含",
   "Additional usage beyond limits consumes API quota or on-demand spend.":
     "超出上限后的额外用量会消耗 API 配额或按需支出。",
+  "Additional usage beyond limits consumes Other Models quota or on-demand spend.":
+    "超出上限后的额外用量会消耗 Other Models 配额或按需支出。",
   "Additional usage beyond limits consumes on-demand spend.":
     "超出上限后的额外用量会消耗按需支出。",
   "Additional usage beyond limits consumes on-demand spend. Your plan includes at least $20 of API usage.":
