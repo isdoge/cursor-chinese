@@ -295,11 +295,23 @@ const textRules: Record<string, string> = {
     "云端 Agent 此前默认使用 100 万 token 上下文窗口。现在，你可以点击所选模型旁的「编辑」按钮，在能力与成本之间做权衡。",
   "Select repository": "选择仓库",
   "Add repository": "添加仓库",
+  "Add Repositories": "添加仓库",
   "Add Environment": "添加环境",
   Refresh: "刷新",
   "All repositories": "所有仓库",
+  "All Repositories": "所有仓库",
   "Select repositories...": "选择仓库...",
+  "repositories...": "仓库...",
   "Select multiple": "多选",
+  "Select Multiple": "多选",
+  "Set Up Cloud Agents": "设置云端 Agents",
+  "Give Agents a Computer": "给 Agents 一台计算机",
+  "Cloud agents ship better code and run faster when you set up their development environment.":
+    "设置开发环境后，云端 Agents 能交付更好的代码，运行也更快。",
+  "Get started": "开始使用",
+  "Use Multiple Models": "使用多个模型",
+  "Multiple models cannot be combined with Long-running.":
+    "多模型无法与长时间运行同时使用。",
   "Run security audit": "运行安全审计",
 
   // Automations page evidence.
@@ -390,6 +402,7 @@ const textRules: Record<string, string> = {
   "Enable self-hosted pool": "启用自托管池",
   "Enable self-hosted pool to create a personal pool of workers.":
     "启用自托管池以创建个人工作节点池。",
+  "Remote Control": "远程控制",
   "Enable remote-control": "启用远程控制",
   "Control your local agents remotely from mobile and web.":
     "通过移动端和网页远程控制你的本地 Agents。",
@@ -1036,6 +1049,7 @@ const attrRules: Record<string, string> = {
   "Search integrations": "搜索集成",
   "Search API keys": "搜索 API 密钥",
   "Search secrets": "搜索密钥",
+  "repositories...": "仓库...",
   "Expand Menu": "展开菜单",
   "New API Key": "新建 API 密钥",
   "More options": "更多操作",
