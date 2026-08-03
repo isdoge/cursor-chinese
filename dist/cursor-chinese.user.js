@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cursor 中文化插件
 // @namespace    https://github.com/isdoge/cursor-chinese
-// @version      1.0.5
+// @version      1.0.6
 // @description  中文化 cursor 管理控制台界面的部分菜单及内容
 // @author       狗带带子
 // @match        https://cursor.com/*
@@ -354,6 +354,10 @@
             Optional: "可选",
             Default: "默认",
             Appearance: "外观",
+            "Light Theme": "浅色主题",
+            "Choose the theme used when your system is in light mode": "选择在系统浅色模式下使用的主题",
+            "Dark Theme": "深色主题",
+            "Choose the theme used when your system is in dark mode": "选择在系统深色模式下使用的主题",
             System: "跟随系统",
             "Active Sessions": "活跃会话",
             "Desktop App": "Desktop App",
@@ -510,6 +514,12 @@
             Template: "模板",
             Templates: "模板",
             "Save time by automating repetitive tasks with always-on agents that respond to triggers.": "通过始终在线、响应触发器的 Agent 自动化重复任务，节省时间。",
+            "Automate repetitive tasks with always-on cloud agents that respond to environment triggers.": "通过始终在线、响应环境触发器的云端 Agent 自动化重复任务。",
+            "No Automations Yet": "还没有自动化",
+            "Run agents on a schedule or automatically in response to events. Billed at plan rates.": "按计划或自动响应事件运行 Agent。按套餐费率计费。",
+            "Add Automation": "添加自动化",
+            "Agent Instructions": "Agent 指令",
+            "Run History": "运行历史",
             "Analyze recent cloud agent runs to root-cause environment setup failures from setup logs, transcripts, and environment info, then report them in Slack": "分析近期云端 Agent 运行记录，结合安装日志、对话记录和环境信息定位环境配置失败根因，并在 Slack 中报告。",
             "Cursor Dashboard": "Cursor 仪表盘",
             Plan: "套餐",
@@ -645,6 +655,8 @@
             "Run Once Per PR": "每个 PR 仅运行一次",
             "Review when opened, ignore new commits": "打开时审查，忽略新提交",
             "Post PR Summary": "发布 PR 摘要",
+            "Post PR risk score": "发布 PR 风险评分",
+            "Include the risk score block in PR summaries": "在 PR 摘要中包含风险评分模块",
             "In Description": "写入描述",
             "As Comment": "作为评论",
             Off: "关",
@@ -921,6 +933,13 @@
             "Connected as": "已连接为",
             "to repositories accessible in organizations:": "可访问以下组织中的仓库：",
             Credits: "额度",
+            "Your account has a credit balance that will be automatically applied to Cursor usage.": "你的账户有信用余额，将自动用于抵扣 Cursor 用量。",
+            "Credits expire on": "额度到期时间",
+            remaining: "剩余",
+            "Cancels on": "取消日期",
+            "Your subscription will cancel on": "你的订阅将于以下日期取消",
+            "Your Usage": "你的用量",
+            "Your usage per day across this billing period": "本账单周期内每日用量",
             Included: "Included",
             free: "free",
             "Included usage": "包含用量",
