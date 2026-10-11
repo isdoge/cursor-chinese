@@ -1,6 +1,6 @@
 {
   "name": "cursor-chinese",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "type": "module",
   "description": "Tampermonkey userscript for Chinese localization of Cursor web dashboard and agents pages",
@@ -18,7 +18,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test scripts/build.test.mjs",
-    "test:evidence": "node --test scripts/evidence.test.mjs"
+    "test:evidence": "node --test scripts/evidence.test.mjs",
+    "dictionary": "node scripts/bump-dictionary.mjs"
   },
   "userscript": {
     "displayName": "Cursor 中文化插件",
@@ -32,12 +33,18 @@
     ],
     "grants": [
       "GM_getValue",
-      "GM_setValue"
+      "GM_setValue",
+      "GM_xmlhttpRequest",
+      "GM_registerMenuCommand"
     ],
     "runAt": "document-idle",
     "homepageURL": "https://github.com/isdoge/cursor-chinese",
     "supportURL": "https://github.com/isdoge/cursor-chinese/issues",
     "updateURL": "https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js",
-    "downloadURL": "https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js"
+    "downloadURL": "https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js",
+    "connect": [
+      "raw.githubusercontent.com",
+      "cdn.jsdelivr.net"
+    ]
   }
 }

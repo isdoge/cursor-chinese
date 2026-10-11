@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert";
 import { readFile, readdir } from "node:fs/promises";
+import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 
 const rootDir = path.resolve(import.meta.dirname, "..");
@@ -20,19 +21,18 @@ async function readAllSourceFiles(dir) {
   return chunks.join("\n");
 }
 
-const exactKeys = new Set([
-  ...[...source.matchAll(/^\s+"([^"]+)":\s+"/gm)].map((match) => match[1]),
-  ...[...source.matchAll(/^\s+([A-Za-z_$][\w$]*):\s+"/gm)].map(
-    (match) => match[1],
-  ),
-]);
+// 词典已外置到 locales/，覆盖范围直接从词典 JSON 断言。
+const dictionaryParts = Object.values(
+  JSON.parse(readFileSync(path.join(rootDir, "locales", "zh-CN.json"), "utf8")),
+);
+const exactKeys = new Set(dictionaryParts.flatMap((part) => Object.keys(part)));
 
-const regexLiterals = [
-  ...source.matchAll(/\{ pattern: \/(.+?)\/([a-z]*)?, replace:/g),
-].map((match) => {
-  const [, pattern, flags = ""] = match;
-  return new RegExp(pattern, flags);
-});
+const rulesJson = JSON.parse(
+  readFileSync(path.join(rootDir, "locales", "rules.json"), "utf8"),
+);
+const regexLiterals = [...rulesJson.regexText, ...rulesJson.regexAttr].map(
+  (rule) => new RegExp(rule.pattern, rule.flags ?? ""),
+);
 
 function covered(value) {
   if (exactKeys.has(value)) return true;
@@ -72,6 +72,7 @@ function shouldSkipText(value) {
 }
 
 test("real Cursor evidence text is covered by dictionaries", async () => {
+  if (!existsSync(evidenceDir)) return; // evidence 是本地材料，仓库与 CI 不含。
   const files = (await readdir(evidenceDir)).filter((name) =>
     name.endsWith(".json"),
   );
@@ -101,6 +102,7 @@ test("real Cursor evidence text is covered by dictionaries", async () => {
 });
 
 test("real Cursor evidence attributes are covered where they contain English", async () => {
+  if (!existsSync(evidenceDir)) return; // evidence 是本地材料，仓库与 CI 不含。
   const files = (await readdir(evidenceDir)).filter((name) =>
     name.endsWith(".json"),
   );

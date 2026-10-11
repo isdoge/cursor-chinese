@@ -9,6 +9,15 @@ const outputFile = path.join(rootDir, "dist", "cursor-chinese.user.js");
 const packageJson = JSON.parse(
   await readFile(path.join(rootDir, "package.json"), "utf8"),
 );
+const releaseConfig = JSON.parse(
+  await readFile(path.join(rootDir, "release.config.json"), "utf8"),
+);
+const dictionary = JSON.parse(
+  await readFile(path.join(rootDir, "locales/zh-CN.json"), "utf8"),
+);
+const rules = JSON.parse(
+  await readFile(path.join(rootDir, "locales/rules.json"), "utf8"),
+);
 
 const importFromPattern =
   /^\s*import\s+(type\s+)?([^'";]+?)\s+from\s+["'](.+?)["'];?\s*$/gm;
@@ -38,6 +47,20 @@ async function buildUserscript() {
     );
   }
 
+  const entryCount = Object.values(dictionary).reduce((sum, part) => sum + Object.keys(part).length, 0);
+  const envelope = {
+    schemaVersion: 1,
+    revision: releaseConfig.dictionaryRevision,
+    entries: entryCount,
+    dictionary,
+    rules,
+  };
+  await writeFile(
+    path.join(rootDir, "locales/zh-CN.online.json"),
+    JSON.stringify(envelope, null, 2) + "\n",
+    "utf8",
+  );
+
   const bundle = `${createUserscriptHeader()}
 (() => {
   const modules = {
@@ -65,9 +88,18 @@ ${indent(bundledModules.join(",\n"), 4)}
 })();
 `;
 
+  const sources = [
+    "https://raw.githubusercontent.com/isdoge/cursor-chinese/main/locales/zh-CN.online.json",
+    "https://cdn.jsdelivr.net/gh/isdoge/cursor-chinese@main/locales/zh-CN.online.json",
+    "https://raw.githubusercontent.com/isdoge/cursor-chinese/v" + packageJson.version + "/locales/zh-CN.online.json",
+  ];
+  const finalBundle = bundle
+    .replace('"__SCRIPT_VERSION__"', JSON.stringify(packageJson.version))
+    .replace("__DICTIONARY_SOURCES__", JSON.stringify(sources));
+
   await mkdir(path.dirname(outputFile), { recursive: true });
-  await writeFile(outputFile, bundle, "utf8");
-  console.log(`Built ${path.relative(rootDir, outputFile)}`);
+  await writeFile(outputFile, finalBundle, "utf8");
+  console.log(`Built ${path.relative(rootDir, outputFile)}（词典 revision ${releaseConfig.dictionaryRevision}，${entryCount} 条）`);
 }
 
 async function collectModuleGraph(filePath, orderedFiles, visited) {
@@ -124,7 +156,12 @@ async function transformModule(filePath) {
       ? toModuleId(resolveLocalModule(filePath, specifier))
       : specifier;
 
-    return `const ${bindings.trim()} = require(${JSON.stringify(requiredId)});`;
+    // import 的 `as` 重命名转成解构的 `:` 重命名
+    const destructured = bindings.trim().replace(
+      /([{,]\s*)([A-Za-z0-9_$]+)\s+as\s+([A-Za-z0-9_$]+)(\s*[,}])/g,
+      "$1$2: $3$4",
+    );
+    return `const ${destructured} = require(${JSON.stringify(requiredId)});`;
   });
 
   code = code.replace(bareImportPattern, (_, specifier) => {
@@ -195,6 +232,7 @@ function createUserscriptHeader() {
     formatHeaderLine("author", userscript.author ?? "unknown"),
     ...(userscript.matches ?? []).map((value) => formatHeaderLine("match", value)),
     ...(userscript.grants ?? []).map((value) => formatHeaderLine("grant", value)),
+    ...(userscript.connect ?? []).map((value) => formatHeaderLine("connect", value)),
     formatOptionalHeaderLine("icon", userscript.icon),
     formatOptionalHeaderLine("icon64", userscript.icon64),
     formatOptionalHeaderLine("homepageURL", userscript.homepageURL),
