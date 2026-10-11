@@ -9,10 +9,19 @@ const outputFile = path.join(rootDir, "dist", "cursor-chinese.user.js");
 const packageJson = JSON.parse(
   await readFile(path.join(rootDir, "package.json"), "utf8"),
 );
+const envelope = JSON.parse(
+  await readFile(path.join(rootDir, "locales", "zh-CN.online.json"), "utf8"),
+);
+const dictionaryTerms = [
+  ...Object.keys(envelope.dictionary.text),
+  ...Object.keys(envelope.dictionary.attr),
+  ...Object.keys(envelope.dictionary.title),
+  ...Object.keys(envelope.dictionary.icons),
+];
 
 test("build produces a valid userscript", async () => {
   // Run build.
-  execSync("node scripts/build.mjs", { cwd: rootDir, stdio: "pipe" });
+  execSync(`"${process.execPath}" scripts/build.mjs`, { cwd: rootDir, stdio: "pipe" });
 
   const dist = await readFile(outputFile, "utf8");
 
@@ -41,17 +50,17 @@ test("build produces a valid userscript", async () => {
   assert.ok(dist.includes("bootstrap()"), "Must contain bootstrap call");
   assert.ok(dist.includes("require("), "Must have module require mechanics");
 
-  // 3. Contains key translation entries
+  // 3. Contains key translation entries（词典已外置，检查 envelope）
   assert.ok(
-    dist.includes('"New Agent"') || dist.includes("New Agent"),
+    dictionaryTerms.includes("New Agent"),
     "Should contain New Agent translation",
   );
   assert.ok(
-    dist.includes('"Automations"') || dist.includes("Automations"),
+    dictionaryTerms.includes("Automations"),
     "Should contain Automations translation",
   );
   assert.ok(
-    dist.includes('"No Agents Yet"') || dist.includes("No Agents Yet"),
+    dictionaryTerms.includes("No Agents Yet"),
     "Should contain No Agents Yet translation",
   );
   assert.ok(
@@ -125,22 +134,22 @@ test("translation coverage sanity", async () => {
 
   for (const term of keyTerms) {
     assert.ok(
-      dist.includes(term),
+      dictionaryTerms.includes(term),
       `Should have translation entry for "${term}"`,
     );
   }
 
   // Per-attribute rules
   assert.ok(
-    dist.includes("Toggle left sidebar"),
+    dictionaryTerms.includes("Toggle left sidebar"),
     "Should have sidebar toggle aria-label translation",
   );
   assert.ok(
-    dist.includes("Search agents (Ctrl+K)"),
+    dictionaryTerms.includes("Search agents (Ctrl+K)"),
     "Should have search aria-label translation",
   );
   assert.ok(
-    dist.includes("User menu"),
+    dictionaryTerms.includes("User menu"),
     "Should have user menu aria-label translation",
   );
 });

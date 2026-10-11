@@ -1,0 +1,283 @@
+{
+  "regexText": [
+    {
+      "pattern": "^([0-9,.]+)% Auto and ([0-9,.]+)% API used$",
+      "flags": "",
+      "replace": "$1% Auto 和 $2% API 已使用"
+    },
+    {
+      "pattern": "^剩余 ([0-9,]+) days?$",
+      "flags": "",
+      "replace": "剩余 $1 天"
+    },
+    {
+      "pattern": "^([0-9,]+) days? remaining$",
+      "flags": "",
+      "replace": "剩余 $1 天"
+    },
+    {
+      "pattern": "^View ([0-9,]+) more$",
+      "flags": "",
+      "replace": "再查看 $1 个"
+    },
+    {
+      "pattern": "^About ([0-9]+) months ago$",
+      "flags": "",
+      "replace": "约 $1 个月前"
+    },
+    {
+      "pattern": "^About ([0-9]+) month ago$",
+      "flags": "",
+      "replace": "约 $1 个月前"
+    },
+    {
+      "pattern": "^([0-9]+) months ago$",
+      "flags": "",
+      "replace": "$1 个月前"
+    },
+    {
+      "pattern": "^([0-9]+) month ago$",
+      "flags": "",
+      "replace": "$1 个月前"
+    },
+    {
+      "pattern": "^(.*?) is Pro$",
+      "flags": "",
+      "replace": "$1 是 Pro 用户"
+    },
+    {
+      "pattern": "^Connected as (.+?) to repositories accessible in organizations: (.+)$",
+      "flags": "",
+      "replace": "已连接为 $1，可访问以下组织中的仓库：$2"
+    },
+    {
+      "pattern": "^([0-9,]+) of ([0-9,]+) used$",
+      "flags": "",
+      "replace": "已使用 $1 / $2"
+    },
+    {
+      "pattern": "^([0-9,]+) members?$",
+      "flags": "",
+      "replace": "$1 名成员"
+    },
+    {
+      "pattern": "^([0-9,]+) seats?$",
+      "flags": "",
+      "replace": "$1 个席位"
+    },
+    {
+      "pattern": "^([0-9,]+) Repositories Available$",
+      "flags": "",
+      "replace": "$1 个可用仓库"
+    },
+    {
+      "pattern": "^(\\d+) of (\\d+) checks enabled during review$",
+      "flags": "",
+      "replace": "审查期间已启用 $1 / $2 项检查"
+    },
+    {
+      "pattern": "^Used ([0-9,.]+)%$",
+      "flags": "",
+      "replace": "已使用 $1%"
+    },
+    {
+      "pattern": "^(.+) remaining$",
+      "flags": "",
+      "replace": "剩余 $1"
+    },
+    {
+      "pattern": "^Created (.+) ago$",
+      "flags": "",
+      "replace": "$1 前创建"
+    },
+    {
+      "pattern": "^Last used (.+) ago$",
+      "flags": "",
+      "replace": "$1 前使用"
+    },
+    {
+      "pattern": "^About (.+) ago$",
+      "flags": "",
+      "replace": "约 $1 前"
+    },
+    {
+      "pattern": "^([0-9,]+) days? ago$",
+      "flags": "",
+      "replace": "$1 天前"
+    },
+    {
+      "pattern": "^Showing ([0-9,]+)-([0-9,]+) of ([0-9,]+)$",
+      "flags": "",
+      "replace": "显示 $1-$2，共 $3"
+    },
+    {
+      "pattern": "^([0-9,]+) \\/ ([0-9,]+)$",
+      "flags": "",
+      "replace": "第 $1 页 / 共 $2 页"
+    },
+    {
+      "pattern": "^Link ([0-9,]+) Add link$",
+      "flags": "",
+      "replace": "链接 $1 添加链接"
+    },
+    {
+      "pattern": "^Device Created Desktop App (.+) Revoke$",
+      "flags": "",
+      "replace": "设备 已创建 Desktop App $1 撤销"
+    },
+    {
+      "pattern": "^Device 已创建 Desktop App (.+) Revoke$",
+      "flags": "",
+      "replace": "设备 已创建 Desktop App $1 撤销"
+    },
+    {
+      "pattern": "^Device 已创建 (.+)$",
+      "flags": "",
+      "replace": "Device 已创建 $1"
+    },
+    {
+      "pattern": "^Renews on (.+)$",
+      "flags": "",
+      "replace": "续订日期：$1"
+    },
+    {
+      "pattern": "^Billed (.+)$",
+      "flags": "",
+      "replace": "计费周期：$1"
+    },
+    {
+      "pattern": "^Use (.+) template$",
+      "flags": "",
+      "replace": "使用“$1”模板"
+    },
+    {
+      "pattern": "^\"$",
+      "flags": "",
+      "replace": "\""
+    },
+    {
+      "pattern": "^Showing token usage and costs from (.+) to (.+)\\. Use filters to narrow results by date range\\.$",
+      "flags": "",
+      "replace": "显示从 $1 到 $2 的 token 用量和费用。使用筛选器按日期范围缩小结果。"
+    },
+    {
+      "pattern": "^Showing token usage and costs from (.+) to (.+)\\. Use filters to narrow results by date range\\.$",
+      "flags": "",
+      "replace": "显示从 $1 到 $2 的 token 用量和费用。使用筛选器按日期范围缩小结果。"
+    },
+    {
+      "pattern": "^\"\\? Any existing integrations using this key will no longer work\\.$",
+      "flags": "",
+      "replace": "？任何使用此密钥的集成将无法继续工作。"
+    },
+    {
+      "pattern": "^[().%$-]$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^[0-9]+(?:\\.[0-9]+)?$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^US\\$[0-9,.]+$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^[0-9,.]+ USD$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^\\$([0-9]+)\\/mo$",
+      "flags": "",
+      "replace": "$$$1/月"
+    },
+    {
+      "pattern": "^[A-Z][a-z]{2} [0-9]{1,2}, [0-9]{4}$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^[A-Z][a-z]{2} [0-9]{1,2} - [A-Z][a-z]{2} [0-9]{2}$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^[A-Z][a-z]{2} [0-9]{1,2}, [0-9]{2}:[0-9]{2} [AP]M$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^Showing token usage and costs from (.+) to (.+)\\. Use filters to narrow results by date range\\.$",
+      "flags": "",
+      "replace": "显示从 $1 到 $2 的 token 用量和费用。使用筛选器按日期范围缩小结果。"
+    },
+    {
+      "pattern": "^Rows: ([0-9,]+)$",
+      "flags": "",
+      "replace": "行数：$1"
+    },
+    {
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9+.]+)+$",
+      "flags": "",
+      "replace": "$&"
+    },
+    {
+      "pattern": "^([1-9]\\d*) files?$",
+      "replace": "$1 个文件"
+    },
+    {
+      "pattern": "^([1-9]\\d*)mo$",
+      "replace": "$1 个月"
+    },
+    {
+      "pattern": "^About (a|an|\\d+) month(s?) ago$",
+      "replace": "约 $1 个月前"
+    },
+    {
+      "pattern": "^About (a|an) month ago$",
+      "replace": "约 1 个月前"
+    },
+    {
+      "pattern": "^View ([1-9]\\d*) more$",
+      "replace": "查看更多 $1 项"
+    },
+    {
+      "pattern": "^Your subscription will auto renew on (.+?)\\.$",
+      "replace": "你的订阅将于 $1 自动续费。"
+    },
+    {
+      "pattern": "^([0-9]+(?:\\.[0-9]+)?)% used$",
+      "replace": "已使用 $1%"
+    },
+    {
+      "pattern": "^/mo\\.$",
+      "replace": "/月"
+    }
+  ],
+  "regexAttr": [
+    {
+      "pattern": "^Use (.+) template$",
+      "flags": "",
+      "replace": "使用“$1”模板"
+    },
+    {
+      "pattern": "^Search (.+)$",
+      "flags": "",
+      "replace": "搜索 $1"
+    },
+    {
+      "pattern": "^Open (.+) menu$",
+      "flags": "",
+      "replace": "打开“$1”菜单"
+    },
+    {
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9+.]+)+$",
+      "flags": "",
+      "replace": "$&"
+    }
+  ]
+}
