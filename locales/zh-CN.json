@@ -1534,7 +1534,21 @@
     "Loading automations": "正在加载自动化",
     "Search Plugins, Skills, MCPs...": "搜索插件、技能、MCP...",
     "Search plugins, automations, and agent templates": "搜索插件、自动化和 Agent 模板",
-    "Cursor logo animation": "Cursor 标志动画"
+    "Cursor logo animation": "Cursor 标志动画",
+    "Manage subscription": "管理你的订阅",
+    "Loading your subscription…": "正在加载你的订阅…",
+    "Loading your subscription...": "正在加载你的订阅...",
+    "Couldn't load the credit balance.": "无法加载额度余额。",
+    "Couldn’t load the credit balance.": "无法加载额度余额。",
+    "Couldn't load the credit balance": "无法加载额度余额",
+    "Weekly usage is temporarily unavailable": "每周用量暂时无法查看",
+    "Billing name": "账单姓名",
+    "Not added": "未添加",
+    "Address": "地址",
+    "VAT/Tax ID": "增值税号 / 税号",
+    "Payment methods": "付款方式",
+    "Add another": "再添加",
+    "Upgrade to Premium": "升级到 Premium"
   },
   "attr": {
     "Cursor home": "Cursor 首页",
@@ -1728,7 +1742,15 @@
     "Cursor logo animation": "Cursor 标志动画",
     "Manage your subscription": "管理你的订阅",
     "Automatic top-ups": "自动充值",
-    "Monthly additional usage limit": "每月额外用量限额"
+    "Monthly additional usage limit": "每月额外用量限额",
+    "Manage subscription": "管理你的订阅",
+    "Billing name": "账单姓名",
+    "Not added": "未添加",
+    "Address": "地址",
+    "VAT/Tax ID": "增值税号 / 税号",
+    "Payment methods": "付款方式",
+    "Add another": "再添加",
+    "Upgrade to Premium": "升级到 Premium"
   },
   "title": {
     "Cursor Agent - Turn your ideas into code": "Cursor Agent - 将你的想法变成代码",

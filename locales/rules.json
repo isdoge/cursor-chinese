@@ -36,6 +36,476 @@
       "replace": "方案于 $1 到期"
     },
     {
+      "pattern": "^Your subscription is active until Jan (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年1月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Jan (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年1月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Jan (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年1月$1日"
+    },
+    {
+      "pattern": "^Resets Jan (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于1月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until January (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年1月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until January (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年1月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until January (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年1月$1日"
+    },
+    {
+      "pattern": "^Resets January (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于1月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until February (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年2月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until February (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年2月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until February (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年2月$1日"
+    },
+    {
+      "pattern": "^Resets February (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于2月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Feb (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年2月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Feb (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年2月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Feb (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年2月$1日"
+    },
+    {
+      "pattern": "^Resets Feb (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于2月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Mar (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年3月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Mar (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年3月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Mar (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年3月$1日"
+    },
+    {
+      "pattern": "^Resets Mar (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于3月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until March (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年3月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until March (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年3月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until March (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年3月$1日"
+    },
+    {
+      "pattern": "^Resets March (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于3月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Apr (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年4月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Apr (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年4月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Apr (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年4月$1日"
+    },
+    {
+      "pattern": "^Resets Apr (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于4月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until April (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年4月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until April (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年4月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until April (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年4月$1日"
+    },
+    {
+      "pattern": "^Resets April (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于4月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until May (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年5月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until May (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年5月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until May (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年5月$1日"
+    },
+    {
+      "pattern": "^Resets May (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于5月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until June (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年6月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until June (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年6月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until June (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年6月$1日"
+    },
+    {
+      "pattern": "^Resets June (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于6月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Jun (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年6月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Jun (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年6月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Jun (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年6月$1日"
+    },
+    {
+      "pattern": "^Resets Jun (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于6月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until July (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年7月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until July (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年7月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until July (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年7月$1日"
+    },
+    {
+      "pattern": "^Resets July (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于7月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Jul (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年7月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Jul (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年7月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Jul (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年7月$1日"
+    },
+    {
+      "pattern": "^Resets Jul (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于7月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until August (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年8月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until August (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年8月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until August (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年8月$1日"
+    },
+    {
+      "pattern": "^Resets August (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于8月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Aug (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年8月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Aug (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年8月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Aug (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年8月$1日"
+    },
+    {
+      "pattern": "^Resets Aug (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于8月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Sep (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年9月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Sep (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年9月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Sep (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年9月$1日"
+    },
+    {
+      "pattern": "^Resets Sep (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于9月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until September (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年9月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until September (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年9月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until September (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年9月$1日"
+    },
+    {
+      "pattern": "^Resets September (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于9月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until October (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年10月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until October (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年10月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until October (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年10月$1日"
+    },
+    {
+      "pattern": "^Resets October (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于10月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Oct (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年10月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Oct (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年10月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Oct (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年10月$1日"
+    },
+    {
+      "pattern": "^Resets Oct (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于10月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until November (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年11月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until November (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年11月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until November (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年11月$1日"
+    },
+    {
+      "pattern": "^Resets November (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于11月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Nov (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年11月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Nov (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年11月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Nov (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年11月$1日"
+    },
+    {
+      "pattern": "^Resets Nov (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于11月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until December (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年12月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until December (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年12月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until December (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年12月$1日"
+    },
+    {
+      "pattern": "^Resets December (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于12月$1日重置"
+    },
+    {
+      "pattern": "^Your subscription is active until Dec (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $2年12月$1日"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until Dec (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年12月$1日"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until Dec (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $2年12月$1日"
+    },
+    {
+      "pattern": "^Resets Dec (\\d{1,2})$",
+      "flags": "",
+      "replace": "将于12月$1日重置"
+    },
+    {
+      "pattern": "^Canceled\\. Your subscription is active until (.+)$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $1"
+    },
+    {
+      "pattern": "^Cancelled\\. Your subscription is active until (.+)$",
+      "flags": "",
+      "replace": "已取消。你的订阅有效期至 $1"
+    },
+    {
       "pattern": "^Resets (.+)$",
       "flags": "",
       "replace": "$1 重置"
@@ -1093,6 +1563,11 @@
       "pattern": "^Search plugins, automations, and agent templates$",
       "flags": "",
       "replace": "搜索插件、自动化和 Agent 模板"
+    },
+    {
+      "pattern": "^(\\d+) of (\\d+) completed$",
+      "flags": "",
+      "replace": "已完成 $1 / $2"
     }
   ]
 }
