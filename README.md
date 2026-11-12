@@ -4,7 +4,7 @@
 
 # Cursor 中文化插件
 
-在浏览器端将 Cursor 官网 Dashboard、Agents、Automations、Marketplace 及相关弹层的常见界面文案翻译为简体中文。
+在浏览器端将 Cursor / Grok 官网 Dashboard、Agents、Automations、Marketplace 及相关弹层的常见界面文案翻译为简体中文。
 
 [安装脚本](https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js)
 ｜
@@ -35,6 +35,8 @@ https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese
 
 - `https://cursor.com/*`
 - `https://www.cursor.com/*`
+- `https://grok.com/*`
+- `https://www.grok.com/*`
 
 ## 脚本菜单
 
@@ -43,7 +45,7 @@ https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese
 
 ## 功能
 
-- 汉化 `cursor.com` 上已支持的 Dashboard、Agents、Automations、Marketplace 页面
+- 汉化 `cursor.com` 与 `grok.com` 上已支持的 Dashboard、Agents、Automations、Marketplace 页面
 - 支持文本、按钮、`aria-label`、`title`、`placeholder`、`value`、`data-content` 等属性翻译
 - 为常见图标按钮（如 `ellipsis`、`list-filter`）补全无障碍标签
 - 兼容单页应用路由切换：自动在路由变更、异步加载、React 文本回写后重翻译

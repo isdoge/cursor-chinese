@@ -1,9 +1,9 @@
 {
   "name": "cursor-chinese",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": true,
   "type": "module",
-  "description": "Tampermonkey userscript for Chinese localization of Cursor web dashboard and agents pages",
+  "description": "Tampermonkey userscript for Chinese localization of Cursor and Grok web dashboard pages",
   "homepage": "https://github.com/isdoge/cursor-chinese",
   "repository": {
     "type": "git",
@@ -24,12 +24,14 @@
   "userscript": {
     "displayName": "Cursor 中文化插件",
     "namespace": "https://github.com/isdoge/cursor-chinese",
-    "description": "中文化 cursor 管理控制台界面的部分菜单及内容",
+    "description": "中文化 Cursor / Grok 管理控制台界面的部分菜单及内容",
     "icon": "https://ts3.tc.mm.bing.net/th/id/ODF.Vi7Qr3OxcQoUxuIrXygTkw?w=32&h=32&qlt=90&pcl=fffffc&o=6&pid=1.2",
     "author": "狗带带子",
     "matches": [
       "https://cursor.com/*",
-      "https://www.cursor.com/*"
+      "https://www.cursor.com/*",
+      "https://grok.com/*",
+      "https://www.grok.com/*"
     ],
     "grants": [
       "GM_getValue",

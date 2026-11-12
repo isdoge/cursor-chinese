@@ -1,6 +1,66 @@
 {
   "regexText": [
     {
+      "pattern": "^Welcome, (.+)\\.$",
+      "flags": "",
+      "replace": "欢迎，$1。"
+    },
+    {
+      "pattern": "^Plan ends (.+)$",
+      "flags": "",
+      "replace": "方案于 $1 到期"
+    },
+    {
+      "pattern": "^Resets (.+)$",
+      "flags": "",
+      "replace": "$1 重置"
+    },
+    {
+      "pattern": "^(\\d+) days? left$",
+      "flags": "",
+      "replace": "剩余 $1 天"
+    },
+    {
+      "pattern": "^Grok Bot (\\d+%)$",
+      "flags": "",
+      "replace": "Grok Bot $1"
+    },
+    {
+      "pattern": "^of \\$([0-9,.]+)$",
+      "flags": "",
+      "replace": "/ $1 美元"
+    },
+    {
+      "pattern": "^(\\d+) of (\\d+) completed$",
+      "flags": "",
+      "replace": "已完成 $1 / $2"
+    },
+    {
+      "pattern": "^(\\d+) sessions?$",
+      "flags": "",
+      "replace": "$1 个会话"
+    },
+    {
+      "pattern": "^Page (\\d+)$",
+      "flags": "",
+      "replace": "第 $1 页"
+    },
+    {
+      "pattern": "^Displaying (\\d+)$",
+      "flags": "",
+      "replace": "显示 $1 条"
+    },
+    {
+      "pattern": "^Show (\\d+) more$",
+      "flags": "",
+      "replace": "再显示 $1 个"
+    },
+    {
+      "pattern": "^Added (.+)$",
+      "flags": "",
+      "replace": "添加于 $1"
+    },
+    {
       "pattern": "^([0-9,.]+)% Auto and ([0-9,.]+)% API used$",
       "flags": "",
       "replace": "$1% Auto 和 $2% API 已使用"
