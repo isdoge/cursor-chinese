@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Cursor 中文化插件
 // @namespace    https://github.com/isdoge/cursor-chinese
-// @version      1.0.7
-// @description  中文化 cursor 管理控制台界面的部分菜单及内容
+// @version      1.0.8
+// @description  中文化 Cursor / Grok 管理控制台界面的部分菜单及内容
 // @author       狗带带子
 // @match        https://cursor.com/*
 // @match        https://www.cursor.com/*
+// @match        https://grok.com/*
+// @match        https://www.grok.com/*
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_xmlhttpRequest
@@ -23,8 +25,8 @@
   const modules = {
     "src/remote-dictionary.ts": (module, exports, require) => {
         const SCRIPT_NAME = "Cursor Chinese";
-        const SCRIPT_VERSION = "1.0.7";
-        const DICTIONARY_SOURCES = ["https://raw.githubusercontent.com/isdoge/cursor-chinese/main/locales/zh-CN.online.json","https://cdn.jsdelivr.net/gh/isdoge/cursor-chinese@main/locales/zh-CN.online.json","https://raw.githubusercontent.com/isdoge/cursor-chinese/v1.0.7/locales/zh-CN.online.json"];
+        const SCRIPT_VERSION = "1.0.8";
+        const DICTIONARY_SOURCES = ["https://raw.githubusercontent.com/isdoge/cursor-chinese/main/locales/zh-CN.online.json","https://cdn.jsdelivr.net/gh/isdoge/cursor-chinese@main/locales/zh-CN.online.json","https://raw.githubusercontent.com/isdoge/cursor-chinese/v1.0.8/locales/zh-CN.online.json"];
         const DICTIONARY_CACHE_KEY = "cursor-zh-remote-dictionary-v1";
         const DICTIONARY_MAX_BYTES = 800_000;
         const LOCK_NAME = "cursor-zh-dictionary-commit-v1";
@@ -582,8 +584,11 @@
                 }
             };
         }
+        function isSupportedHost(hostname) {
+            return hostname === "cursor.com" || hostname.endsWith(".cursor.com") || hostname === "grok.com" || hostname.endsWith(".grok.com");
+        }
         function bootstrap() {
-            if (!location.hostname.endsWith("cursor.com")) return;
+            if (!isSupportedHost(location.hostname)) return;
             initRemoteDictionary(()=>{
                 scheduleTranslate(0);
             });

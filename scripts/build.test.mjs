@@ -40,6 +40,16 @@ test("build produces a valid userscript", async () => {
     /\/\/ @match\s+https:\/\/www\.cursor\.com\/\*/,
     "Must contain www.cursor.com match",
   );
+  assert.match(
+    dist,
+    /\/\/ @match\s+https:\/\/grok\.com\/\*/,
+    "Must contain grok.com match",
+  );
+  assert.match(
+    dist,
+    /\/\/ @match\s+https:\/\/www\.grok\.com\/\*/,
+    "Must contain www.grok.com match",
+  );
   assert.match(dist, /\/\/ @run-at\s+document-idle/, "Must have run-at");
   assert.ok(
     dist.includes(`// @version      ${packageJson.version}`),

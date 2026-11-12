@@ -402,8 +402,17 @@ function exposeApi(): void {
   };
 }
 
+function isSupportedHost(hostname: string): boolean {
+  return (
+    hostname === "cursor.com" ||
+    hostname.endsWith(".cursor.com") ||
+    hostname === "grok.com" ||
+    hostname.endsWith(".grok.com")
+  );
+}
+
 function bootstrap(): void {
-  if (!location.hostname.endsWith("cursor.com")) return;
+  if (!isSupportedHost(location.hostname)) return;
   initRemoteDictionary(() => {
     scheduleTranslate(0);
   });
