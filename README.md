@@ -2,9 +2,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-√-green.svg)](https://www.tampermonkey.net/)
 
-# Cursor 中文化插件
+# cursor / grok 中文化插件
 
-在浏览器端将 Cursor / Grok 官网 Dashboard、Agents、Automations、Marketplace 及相关弹层的常见界面文案翻译为简体中文。
+当前版本 **1.0.8**。
+
+在浏览器端将 [Cursor](https://cursor.com/) 与 [Grok Dashboard](https://grok.com/dashboard) 的常见界面文案翻译为简体中文，覆盖 Dashboard、Agents、Automations、Marketplace、Customize、Codebase 及相关弹层。
 
 [安装脚本](https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese.user.js)
 ｜
@@ -31,12 +33,12 @@ https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese
 
 ### 3. 刷新页面使用
 
-脚本匹配范围：
+主要覆盖这些页面：
 
 - `https://cursor.com/*`
-- `https://www.cursor.com/*`
-- `https://grok.com/*`
-- `https://www.grok.com/*`
+- `https://grok.com/dashboard/*`（`https://cursor.com/dashboard` 会跳转到此）
+
+脚本实际匹配范围还包括 `https://www.cursor.com/*`、`https://grok.com/*`、`https://www.grok.com/*`。
 
 ## 脚本菜单
 
@@ -45,7 +47,7 @@ https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese
 
 ## 功能
 
-- 汉化 `cursor.com` 与 `grok.com` 上已支持的 Dashboard、Agents、Automations、Marketplace 页面
+- 汉化 `https://cursor.com/*` 与 `https://grok.com/dashboard/*` 上已支持的 Dashboard、Agents、Automations、Marketplace、Customize、Codebase 页面
 - 支持文本、按钮、`aria-label`、`title`、`placeholder`、`value`、`data-content` 等属性翻译
 - 为常见图标按钮（如 `ellipsis`、`list-filter`）补全无障碍标签
 - 兼容单页应用路由切换：自动在路由变更、异步加载、React 文本回写后重翻译
@@ -53,28 +55,18 @@ https://raw.githubusercontent.com/isdoge/cursor-chinese/main/dist/cursor-chinese
 
 ### 当前覆盖页面
 
-Agents 与自动化：
+Grok Dashboard（`https://grok.com/dashboard/*`）：
+
+`https://cursor.com/dashboard` 会跳转到 `https://grok.com/dashboard`，两边是同一套界面。已覆盖 Dashboard 及其常见子页，例如设置、Cloud Agents、API keys、Logs、Models、Plugins、Integrations、Shared resources、Members、Usage、Billing 等。
+
+Cursor（`https://cursor.com/*`）：
 
 - `/agents`
 - `/automations`（含 Popular、Code Review、Security、Incidents & Triage、Data & Research 等分类）
-
-Dashboard：
-
-- `/dashboard`
-- `/dashboard/settings`
-- `/dashboard/cloud-agents`
-- `/dashboard/bugbot`（含 `/installation/*`、`/org-repository-rules/*`）
-- `/dashboard/security-agents`（含 `/*/checks`）
-- `/dashboard/approval-agents`
-- `/dashboard/plugins`
-- `/dashboard/integrations`
-- `/dashboard/api?section=user-keys#user-api-keys`（含 New API Key 弹层常见文案）
-- `/dashboard/shared-canvases`
-- `/dashboard/members`
-- `/dashboard/usage`
-- `/dashboard/spending`
-- `/dashboard/billing`
+- `/codebase`
+- `/customize`（含 plugins、mcps、skills、agents、rules、commands、hooks 等 `/user` 子页，以及 marketplace）
 - `/marketplace`、`/marketplace/publish`
+- 仍可从 Cursor 打开的 Dashboard 相关入口（会跳到 Grok Dashboard）
 
 ## 语言切换
 
@@ -136,7 +128,7 @@ npm test            # 执行构建测试
 
 欢迎提 Issue 或 PR。补翻译建议按以下顺序：
 
-1. 在真实 Cursor 页面确认英文残留位置与文案；反馈中不要包含账号信息或敏感数据。
+1. 在真实的 Cursor 或 Grok Dashboard 页面确认英文残留位置与文案；反馈中不要包含账号信息或敏感数据。
 2. 在 **`locales/zh-CN.json`** 或 `locales/rules.json` 中补充词条，不再把词典写进 `src/`；运行时行为修改才进入 `src/main.ts`。
 3. 修改词典后显式运行 `npm run dictionary`，递增 `dictionaryRevision` 并更新指纹，再运行 `npm run build` 与 `npm test`。
 4. 回真实页面复验后提交不含私密信息的 PR。

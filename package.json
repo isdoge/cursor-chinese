@@ -22,7 +22,7 @@
     "dictionary": "node scripts/bump-dictionary.mjs"
   },
   "userscript": {
-    "displayName": "Cursor 中文化插件",
+    "displayName": "cursor / grok 中文化插件",
     "namespace": "https://github.com/isdoge/cursor-chinese",
     "description": "中文化 Cursor / Grok 管理控制台界面的部分菜单及内容",
     "icon": "https://ts3.tc.mm.bing.net/th/id/ODF.Vi7Qr3OxcQoUxuIrXygTkw?w=32&h=32&qlt=90&pcl=fffffc&o=6&pid=1.2",

@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Cursor 中文化插件
+// @name         cursor / grok 中文化插件
 // @namespace    https://github.com/isdoge/cursor-chinese
 // @version      1.0.8
 // @description  中文化 Cursor / Grok 管理控制台界面的部分菜单及内容
