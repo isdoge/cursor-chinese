@@ -1,6 +1,31 @@
 {
   "regexText": [
     {
+      "pattern": "^Shortcuts\\s+(.+)$",
+      "flags": "",
+      "replace": "快捷键 $1"
+    },
+    {
+      "pattern": "^(\\d+)d$",
+      "flags": "",
+      "replace": "$1 天"
+    },
+    {
+      "pattern": "^搜索 Plugins, Skills, MCPs\\.\\.\\.$",
+      "flags": "",
+      "replace": "搜索插件、技能、MCP..."
+    },
+    {
+      "pattern": "^Collapse sidebar \\((.+)\\)$",
+      "flags": "",
+      "replace": "折叠侧边栏 ($1)"
+    },
+    {
+      "pattern": "^通知 alt\\+T$",
+      "flags": "",
+      "replace": "通知 Alt+T"
+    },
+    {
       "pattern": "^Welcome, (.+)\\.$",
       "flags": "",
       "replace": "欢迎，$1。"
