@@ -1,6 +1,6 @@
 {
   "name": "cursor-chinese",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "type": "module",
   "description": "Tampermonkey userscript for Chinese localization of Cursor and Grok web dashboard pages",

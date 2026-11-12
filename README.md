@@ -4,7 +4,7 @@
 
 # cursor / grok 中文化插件
 
-当前版本 **1.0.8**。
+当前版本 **1.0.9**。
 
 在浏览器端将 [Cursor](https://cursor.com/) 与 [Grok Dashboard](https://grok.com/dashboard) 的常见界面文案翻译为简体中文，覆盖 Dashboard、Agents、Automations、Marketplace、Customize、Codebase 及相关弹层。
 
