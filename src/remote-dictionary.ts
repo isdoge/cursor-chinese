@@ -292,6 +292,7 @@ export function initRemoteDictionary(onLoaded?: () => void): void {
   try {
     window.GM_registerMenuCommand?.("立即更新中文词典", () => {
       void refreshDictionary().then((ok) => {
+        if (ok && onLoaded) onLoaded();
         window.alert(ok ? "中文词典已更新。" : "未能更新，已保留当前词典。请稍后重试。");
       });
     });

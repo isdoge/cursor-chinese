@@ -67,6 +67,7 @@ const ATTRIBUTES = [
   "placeholder",
   "value",
   "data-content",
+  "aria-description",
 ];
 
 function readLanguagePreference(): LanguagePreference {

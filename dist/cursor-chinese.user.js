@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         cursor / grok 中文化插件
 // @namespace    https://github.com/isdoge/cursor-chinese
-// @version      1.0.9
+// @version      1.1.0
 // @description  中文化 Cursor / Grok 管理控制台界面的部分菜单及内容
 // @author       狗带带子
 // @match        https://cursor.com/*
@@ -25,8 +25,8 @@
   const modules = {
     "src/remote-dictionary.ts": (module, exports, require) => {
         const SCRIPT_NAME = "Cursor Chinese";
-        const SCRIPT_VERSION = "1.0.9";
-        const DICTIONARY_SOURCES = ["https://raw.githubusercontent.com/isdoge/cursor-chinese/main/locales/zh-CN.online.json","https://cdn.jsdelivr.net/gh/isdoge/cursor-chinese@main/locales/zh-CN.online.json","https://raw.githubusercontent.com/isdoge/cursor-chinese/v1.0.9/locales/zh-CN.online.json"];
+        const SCRIPT_VERSION = "1.1.0";
+        const DICTIONARY_SOURCES = ["https://raw.githubusercontent.com/isdoge/cursor-chinese/main/locales/zh-CN.online.json","https://cdn.jsdelivr.net/gh/isdoge/cursor-chinese@main/locales/zh-CN.online.json","https://raw.githubusercontent.com/isdoge/cursor-chinese/v1.1.0/locales/zh-CN.online.json"];
         const DICTIONARY_CACHE_KEY = "cursor-zh-remote-dictionary-v1";
         const DICTIONARY_MAX_BYTES = 800_000;
         const LOCK_NAME = "cursor-zh-dictionary-commit-v1";
@@ -276,6 +276,7 @@
             try {
                 window.GM_registerMenuCommand?.("立即更新中文词典", ()=>{
                     void refreshDictionary().then((ok)=>{
+                        if (ok && onLoaded) onLoaded();
                         window.alert(ok ? "中文词典已更新。" : "未能更新，已保留当前词典。请稍后重试。");
                     });
                 });
@@ -323,7 +324,8 @@
             "title",
             "placeholder",
             "value",
-            "data-content"
+            "data-content",
+            "aria-description"
         ];
         function readLanguagePreference() {
             try {

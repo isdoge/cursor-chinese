@@ -81,6 +81,126 @@
       "replace": "再显示 $1 个"
     },
     {
+      "pattern": "^Your subscription is active until (.+)$",
+      "flags": "",
+      "replace": "你的订阅有效期至 $1"
+    },
+    {
+      "pattern": "^Added January (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年1月$1日"
+    },
+    {
+      "pattern": "^Added February (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年2月$1日"
+    },
+    {
+      "pattern": "^Added March (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年3月$1日"
+    },
+    {
+      "pattern": "^Added April (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年4月$1日"
+    },
+    {
+      "pattern": "^Added May (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年5月$1日"
+    },
+    {
+      "pattern": "^Added June (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年6月$1日"
+    },
+    {
+      "pattern": "^Added July (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年7月$1日"
+    },
+    {
+      "pattern": "^Added August (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年8月$1日"
+    },
+    {
+      "pattern": "^Added September (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年9月$1日"
+    },
+    {
+      "pattern": "^Added October (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年10月$1日"
+    },
+    {
+      "pattern": "^Added November (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年11月$1日"
+    },
+    {
+      "pattern": "^Added December (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年12月$1日"
+    },
+    {
+      "pattern": "^Added Jan (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年1月$1日"
+    },
+    {
+      "pattern": "^Added Feb (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年2月$1日"
+    },
+    {
+      "pattern": "^Added Mar (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年3月$1日"
+    },
+    {
+      "pattern": "^Added Apr (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年4月$1日"
+    },
+    {
+      "pattern": "^Added Jun (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年6月$1日"
+    },
+    {
+      "pattern": "^Added Jul (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年7月$1日"
+    },
+    {
+      "pattern": "^Added Aug (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年8月$1日"
+    },
+    {
+      "pattern": "^Added Sep (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年9月$1日"
+    },
+    {
+      "pattern": "^Added Oct (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年10月$1日"
+    },
+    {
+      "pattern": "^Added Nov (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年11月$1日"
+    },
+    {
+      "pattern": "^Added Dec (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "添加于 $2年12月$1日"
+    },
+    {
       "pattern": "^Added (.+)$",
       "flags": "",
       "replace": "添加于 $1"
@@ -341,6 +461,591 @@
     {
       "pattern": "^/mo\\.$",
       "replace": "/月"
+    },
+    {
+      "pattern": "^Expires (.+)$",
+      "flags": "",
+      "replace": "有效期至 $1"
+    },
+    {
+      "pattern": "^No lines edited · (.+)$",
+      "flags": "",
+      "replace": "未编辑任何行 · $1"
+    },
+    {
+      "pattern": "^January (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "1月$1日，$2"
+    },
+    {
+      "pattern": "^January (\\d{4})$",
+      "flags": "",
+      "replace": "1月 $1"
+    },
+    {
+      "pattern": "^January (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "1月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^January (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "1月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^January (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "1月$1–$2日，$3"
+    },
+    {
+      "pattern": "^February (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "2月$1日，$2"
+    },
+    {
+      "pattern": "^February (\\d{4})$",
+      "flags": "",
+      "replace": "2月 $1"
+    },
+    {
+      "pattern": "^February (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "2月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^February (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "2月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^February (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "2月$1–$2日，$3"
+    },
+    {
+      "pattern": "^March (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "3月$1日，$2"
+    },
+    {
+      "pattern": "^March (\\d{4})$",
+      "flags": "",
+      "replace": "3月 $1"
+    },
+    {
+      "pattern": "^March (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "3月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^March (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "3月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^March (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "3月$1–$2日，$3"
+    },
+    {
+      "pattern": "^April (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "4月$1日，$2"
+    },
+    {
+      "pattern": "^April (\\d{4})$",
+      "flags": "",
+      "replace": "4月 $1"
+    },
+    {
+      "pattern": "^April (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "4月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^April (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "4月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^April (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "4月$1–$2日，$3"
+    },
+    {
+      "pattern": "^May (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "5月$1日，$2"
+    },
+    {
+      "pattern": "^May (\\d{4})$",
+      "flags": "",
+      "replace": "5月 $1"
+    },
+    {
+      "pattern": "^May (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "5月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^May (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "5月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^May (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "5月$1–$2日，$3"
+    },
+    {
+      "pattern": "^June (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "6月$1日，$2"
+    },
+    {
+      "pattern": "^June (\\d{4})$",
+      "flags": "",
+      "replace": "6月 $1"
+    },
+    {
+      "pattern": "^June (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "6月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^June (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "6月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^June (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "6月$1–$2日，$3"
+    },
+    {
+      "pattern": "^July (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "7月$1日，$2"
+    },
+    {
+      "pattern": "^July (\\d{4})$",
+      "flags": "",
+      "replace": "7月 $1"
+    },
+    {
+      "pattern": "^July (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "7月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^July (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "7月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^July (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "7月$1–$2日，$3"
+    },
+    {
+      "pattern": "^August (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "8月$1日，$2"
+    },
+    {
+      "pattern": "^August (\\d{4})$",
+      "flags": "",
+      "replace": "8月 $1"
+    },
+    {
+      "pattern": "^August (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "8月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^August (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "8月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^August (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "8月$1–$2日，$3"
+    },
+    {
+      "pattern": "^September (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "9月$1日，$2"
+    },
+    {
+      "pattern": "^September (\\d{4})$",
+      "flags": "",
+      "replace": "9月 $1"
+    },
+    {
+      "pattern": "^September (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "9月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^September (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "9月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^September (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "9月$1–$2日，$3"
+    },
+    {
+      "pattern": "^October (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "10月$1日，$2"
+    },
+    {
+      "pattern": "^October (\\d{4})$",
+      "flags": "",
+      "replace": "10月 $1"
+    },
+    {
+      "pattern": "^October (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "10月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^October (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "10月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^October (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "10月$1–$2日，$3"
+    },
+    {
+      "pattern": "^November (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "11月$1日，$2"
+    },
+    {
+      "pattern": "^November (\\d{4})$",
+      "flags": "",
+      "replace": "11月 $1"
+    },
+    {
+      "pattern": "^November (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "11月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^November (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "11月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^November (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "11月$1–$2日，$3"
+    },
+    {
+      "pattern": "^December (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "12月$1日，$2"
+    },
+    {
+      "pattern": "^December (\\d{4})$",
+      "flags": "",
+      "replace": "12月 $1"
+    },
+    {
+      "pattern": "^December (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "12月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^December (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "12月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^December (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "12月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Jan (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "1月$1日，$2"
+    },
+    {
+      "pattern": "^Jan (\\d{4})$",
+      "flags": "",
+      "replace": "1月 $1"
+    },
+    {
+      "pattern": "^Jan (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "1月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Jan (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "1月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Jan (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "1月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Feb (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "2月$1日，$2"
+    },
+    {
+      "pattern": "^Feb (\\d{4})$",
+      "flags": "",
+      "replace": "2月 $1"
+    },
+    {
+      "pattern": "^Feb (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "2月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Feb (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "2月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Feb (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "2月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Mar (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "3月$1日，$2"
+    },
+    {
+      "pattern": "^Mar (\\d{4})$",
+      "flags": "",
+      "replace": "3月 $1"
+    },
+    {
+      "pattern": "^Mar (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "3月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Mar (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "3月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Mar (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "3月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Apr (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "4月$1日，$2"
+    },
+    {
+      "pattern": "^Apr (\\d{4})$",
+      "flags": "",
+      "replace": "4月 $1"
+    },
+    {
+      "pattern": "^Apr (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "4月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Apr (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "4月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Apr (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "4月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Jun (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "6月$1日，$2"
+    },
+    {
+      "pattern": "^Jun (\\d{4})$",
+      "flags": "",
+      "replace": "6月 $1"
+    },
+    {
+      "pattern": "^Jun (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "6月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Jun (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "6月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Jun (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "6月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Jul (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "7月$1日，$2"
+    },
+    {
+      "pattern": "^Jul (\\d{4})$",
+      "flags": "",
+      "replace": "7月 $1"
+    },
+    {
+      "pattern": "^Jul (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "7月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Jul (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "7月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Jul (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "7月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Aug (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "8月$1日，$2"
+    },
+    {
+      "pattern": "^Aug (\\d{4})$",
+      "flags": "",
+      "replace": "8月 $1"
+    },
+    {
+      "pattern": "^Aug (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "8月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Aug (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "8月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Aug (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "8月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Sep (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "9月$1日，$2"
+    },
+    {
+      "pattern": "^Sep (\\d{4})$",
+      "flags": "",
+      "replace": "9月 $1"
+    },
+    {
+      "pattern": "^Sep (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "9月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Sep (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "9月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Sep (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "9月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Oct (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "10月$1日，$2"
+    },
+    {
+      "pattern": "^Oct (\\d{4})$",
+      "flags": "",
+      "replace": "10月 $1"
+    },
+    {
+      "pattern": "^Oct (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "10月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Oct (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "10月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Oct (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "10月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Nov (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "11月$1日，$2"
+    },
+    {
+      "pattern": "^Nov (\\d{4})$",
+      "flags": "",
+      "replace": "11月 $1"
+    },
+    {
+      "pattern": "^Nov (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "11月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Nov (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "11月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Nov (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "11月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Dec (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "12月$1日，$2"
+    },
+    {
+      "pattern": "^Dec (\\d{4})$",
+      "flags": "",
+      "replace": "12月 $1"
+    },
+    {
+      "pattern": "^Dec (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) AM$",
+      "flags": "",
+      "replace": "12月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Dec (\\d{1,2}), (\\d{4}), (\\d{1,2}):(\\d{2}) PM$",
+      "flags": "",
+      "replace": "12月$1日，$2 $3:$4"
+    },
+    {
+      "pattern": "^Dec (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
+      "flags": "",
+      "replace": "12月$1–$2日，$3"
     }
   ],
   "regexAttr": [
@@ -363,6 +1068,31 @@
       "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9+.]+)+$",
       "flags": "",
       "replace": "$&"
+    },
+    {
+      "pattern": "^Welcome, (.+)\\.$",
+      "flags": "",
+      "replace": "欢迎，$1。"
+    },
+    {
+      "pattern": "^Actions for (.+)$",
+      "flags": "",
+      "replace": "$1 的操作"
+    },
+    {
+      "pattern": "^No lines edited · (.+)$",
+      "flags": "",
+      "replace": "未编辑任何行 · $1"
+    },
+    {
+      "pattern": "^Search Plugins, Skills, MCPs\\.\\.\\.$",
+      "flags": "",
+      "replace": "搜索插件、技能、MCP..."
+    },
+    {
+      "pattern": "^Search plugins, automations, and agent templates$",
+      "flags": "",
+      "replace": "搜索插件、自动化和 Agent 模板"
     }
   ]
 }
