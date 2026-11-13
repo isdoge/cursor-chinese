@@ -1516,6 +1516,26 @@
       "pattern": "^Dec (\\d{1,2}) [–-] (\\d{1,2}), (\\d{4})$",
       "flags": "",
       "replace": "12月$1–$2日，$3"
+    },
+    {
+      "pattern": "^Your plan won['’]t renew and stays active until (.+)\\.$",
+      "flags": "",
+      "replace": "你的方案不会续订，将持续有效至 $1。"
+    },
+    {
+      "pattern": "^Showing (\\d+) apps?$",
+      "flags": "",
+      "replace": "显示 $1 个应用"
+    },
+    {
+      "pattern": "^(\\d+) secrets$",
+      "flags": "",
+      "replace": "$1 个密钥"
+    },
+    {
+      "pattern": "^(\\d+) keys$",
+      "flags": "",
+      "replace": "$1 个密钥"
     }
   ],
   "regexAttr": [
